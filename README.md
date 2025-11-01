@@ -37,12 +37,12 @@ This dataset contains 5 scenarios of instructional text, including 1044 training
 
 ### Construction of Edited FFN
 
-- Defense jailbreak attack
+- Defense Jailbreak Attack
 
 ````
 sh ./defense-jailbreak_attack/1_Single_Refusal_Module/single_refusal.sh
 ````
-- Defense fine-tuning attack
+- Defense Fine-Tuning Attack
 ````
 sh ./defense-finetuning_attack/1_Single_Refusal_Module/agnews-single_refusal.sh
 ````
@@ -50,41 +50,40 @@ For other datasets, please refer to the corresponding scripts (i.e., gsm8k-singl
 
 
 ### Training of Layer-wise Safety Judgment
-- Defense jailbreak attack
+- Defense Jailbreak Attack
 ````
 sh ./defense-jailbreak_attack/2_Logit_Fusion_Classification/train.sh
 ````
-- Defense fine-tuning attack
+- Defense Fine-Tuning Attack
 ````
 sh ./defense-finetuning_attack/2_Logit_Fusion_Classification/agnews-train.sh
 ````
 For other datasets, please refer to the corresponding scripts(i.e., gsm8k-train.sh and SST2-train.sh).
 
 ### Safety-aware Attention Realignment & Dual Routing
-- Defense jailbreak attack
+- Defense Jailbreak Attack
 ````
 sh ./defense-jailbreak_attack/3_Dual_Routing/safety_eval.sh
 ````
-Supported jailbreak attack types include autodan, pair, artprompt, random_search, gpt4cipher, past_tense, deep_inception, gptfuzz, and gcg.
+Supported jailbreak attack types include autodan, pair, artprompt, random_search, gpt4cipher, past_tense, deep_inception, gptfuzz, and gcg. To generate jailbreak attack samples, we use repository [panda-guard](https://github.com/Beijing-AISI/panda-guard).
 
-- Defense fine-tuning attack
+- Defense Fine-Tuning Attack
 ````
 sh ./defense-finetuning_attack/3_Dual_Routing/agnews-safey_eval.sh
 ````
-
-
+For fine-tuning attack datasets with different poisoning levels (i.e., p = 0.1 and p = 0.2), we adopt the datasets provided in the `/ft_datasets` directory from [AsFT](https://github.com/PKU-YuanGroup/AsFT).
 
 ## Acknowledgement
 Some codes are build upon [Llms_Encode_Harmfulness_Refusal_
-Separately](https://github.com/CHATS-lab/Llms_Encode_Harmfulness_Refusal_Separately), [Tokens Highlighter](https://github.com/fabiospampinato/tokens-highlighter) and [ToxEdit](https://github.com/ABi-dot/ToxEdit).
+Separately](https://github.com/CHATS-lab/Llms_Encode_Harmfulness_Refusal_Separately), [Tokens Highlighter](https://github.com/fabiospampinato/tokens-highlighter) and [ToxEdit](https://github.com/ABi-dot/ToxEdit). For generate jailbreak attack samples, we use repository [panda-guard](https://github.com/Beijing-AISI/panda-guard). For evaluate baselines of various defense methods, we use repository [AISafetyLab](https://github.com/thu-coai/AISafetyLab).
 
 
 ## Citation
 
 If you find this work useful, please cite our paper:
 ```bibtex
-@article{xinykou2023unified,
+@inproceedings{xinykou2023unified,
   title={Unified Defense for Large Language Models against Jailbreak and Fine-Tuning Attacks in Education},
-  journal={arXiv preprint arXiv:2305.17805},
+  booktitle={arXiv preprint arXiv:2305.17805},
   year={2025}
 }
