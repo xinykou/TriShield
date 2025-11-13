@@ -80,10 +80,10 @@ Separately](https://github.com/CHATS-lab/Llms_Encode_Harmfulness_Refusal_Separat
 
 ## Citation
 
-If you find this work useful, please cite our paper:
+<!-- If you find this work useful, please cite our paper:
 ```bibtex
 @inproceedings{xinykou2023unified,
   title={Unified Defense for Large Language Models against Jailbreak and Fine-Tuning Attacks in Education},
   booktitle={arXiv preprint arXiv:2305.17805},
   year={2025}
-}
+} -->
